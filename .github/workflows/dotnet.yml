@@ -26,20 +26,20 @@ jobs:
       run: dotnet publish --no-restore
       # path
     - name: tmux new
-      run: tmux new -s ZstdNet
+      run: tmux new /home/testApi/actions-runner/_work/api-app-asp-core/api-app-asp-core/bin/Release/net7.0 -s api-app 
       
     - name: dotnet run
-      run:  dotnet ZstdNet.dll
+      run:  dotnet api-app.dll
      # path
 
-    - name: tmux kill-session
-      run: tmux kill-session -t ZstdNet
+    - name: tmux kill-session 
+      run: tmux kill-session /home/testApi/actions-runner/_work/api-app-asp-core/api-app-asp-core/bin/Release/net7.0  -t api-app
       
     - name: tmux new
-      run: tmux new -s ZstdNet
+      run: tmux new -s api-app
       
     - name: dotnet run
-      run:  dotnet ZstdNet.dll
+      run:  dotnet api-app.dll
  
 
  
