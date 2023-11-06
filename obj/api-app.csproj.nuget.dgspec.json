@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/abbas/Projects/api-app/api-app/api-app.csproj": {}
+    "/Users/abbas/Desktop/oc.iq/api-app-asp-core/api-app.csproj": {}
   },
   "projects": {
-    "/Users/abbas/Projects/api-app/api-app/api-app.csproj": {
+    "/Users/abbas/Desktop/oc.iq/api-app-asp-core/api-app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/abbas/Projects/api-app/api-app/api-app.csproj",
+        "projectUniqueName": "/Users/abbas/Desktop/oc.iq/api-app-asp-core/api-app.csproj",
         "projectName": "api-app",
-        "projectPath": "/Users/abbas/Projects/api-app/api-app/api-app.csproj",
+        "projectPath": "/Users/abbas/Desktop/oc.iq/api-app-asp-core/api-app.csproj",
         "packagesPath": "/Users/abbas/.nuget/packages/",
-        "outputPath": "/Users/abbas/Projects/api-app/api-app/obj/",
+        "outputPath": "/Users/abbas/Desktop/oc.iq/api-app-asp-core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/abbas/.nuget/NuGet/NuGet.Config"
@@ -20,7 +20,7 @@
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.307/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.308/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -101,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
         }
       }
     }
