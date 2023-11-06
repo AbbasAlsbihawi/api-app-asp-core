@@ -34,8 +34,8 @@ jobs:
     # Here, you should have steps to test the running application if needed.
     # After testing or after a certain time, you might want to stop the app.
     
-    - name: Kill the tmux session
-      run: tmux kill-session -t api-app
+    # - name: Kill the tmux session
+    #   run: tmux kill-session -t api-app
 
 
       
