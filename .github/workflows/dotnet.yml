@@ -20,26 +20,45 @@ jobs:
         dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: publish
-      run: dotnet publish --no-restore
-    - name: publish
-      run: dotnet publish --no-restore
-      # path
-    - name: tmux new
-      run: tmux new /home/testApi/actions-runner/_work/api-app-asp-core/api-app-asp-core/bin/Release/net7.0 -s api-app 
-      
-    - name: dotnet run
-      run:  dotnet api-app.dll
-     # path
 
-    - name: tmux kill-session 
-      run: tmux kill-session /home/testApi/actions-runner/_work/api-app-asp-core/api-app-asp-core/bin/Release/net7.0  -t api-app
+    - name: Publish
+      run: dotnet publish --no-restore -c Release -o ./publish
+
+    # After publishing the app, you probably want to run the published app.
+    # The commands below assume you want to start it in a detached tmux session.
+    - name: Start API app in a tmux session
+      run: |
+        tmux new-session -d -s api-app './publish/api-app'
+        sleep 5 # Give some time for the application to start
+
+    # Here, you should have steps to test the running application if needed.
+    # After testing or after a certain time, you might want to stop the app.
+    
+    - name: Kill the tmux session
+      run: tmux kill-session -t api-app
+
+
       
-    - name: tmux new
-      run: tmux new -s api-app
+    # - name: publish
+    #   run: dotnet publish --no-restore
+    # - name: publish
+    #   run: dotnet publish --no-restore
+    #   # path
+    # - name: tmux new
+    #   run: tmux new /home/testApi/actions-runner/_work/api-app-asp-core/api-app-asp-core/bin/Release/net7.0 -s api-app 
       
-    - name: dotnet run
-      run:  dotnet api-app.dll
+    # - name: dotnet run
+    #   run:  dotnet api-app.dll
+    #  # path
+
+    # - name: tmux kill-session 
+    #   run: tmux kill-session /home/testApi/actions-runner/_work/api-app-asp-core/api-app-asp-core/bin/Release/net7.0  -t api-app
+      
+    # - name: tmux new
+    #   run: tmux new -s api-app
+      
+    # - name: dotnet run
+    #   run:  dotnet api-app.dll
  
 
  
