@@ -23,6 +23,11 @@ jobs:
 
     - name: Publish
       run: dotnet publish --no-restore -c Release -o ./publish
+    
+    - name: Ensure tmux session is not running
+      run: |
+        tmux has-session -t api-app && tmux kill-session -t api-app || true
+
 
     # After publishing the app, you probably want to run the published app.
     # The commands below assume you want to start it in a detached tmux session.
